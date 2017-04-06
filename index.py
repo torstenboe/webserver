@@ -1,13 +1,30 @@
 import socket
+import sys
 
-mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+try:
+    mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-host = socket.gethostbyname("www.google.com")
+except socket.error:
+    print("Failed to create socket")
+    sys.exit()
+
+try:
+    host = socket.gethostbyname("www.google.com")
+
+except socket.gaierror:
+    print("Failed to get host")
+    sys.exit()
+
 mysock.connect(host,80)
-
 message = "GET / HTTP/1.1\r\n\r\n"
-mysock.sendall(message)
+
+try:
+    mysock.sendall(message)
+
+except socket.gaierror:
+    print("Failed to send")
+    sys.exit()
 
 data = mysock.recv(1000)
-
+print(data)
 mysock.close()
