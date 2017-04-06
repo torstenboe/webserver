@@ -19,7 +19,7 @@ mysock.connect((host, 1234))
 message = "You have send data!"
 
 try:
-    mysock.sendall(message)
+    mysock.sendall(bytes(message, 'UTF-8'))
 
 except socket.gaierror:
     print("Failed to send")
