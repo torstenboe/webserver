@@ -4,7 +4,7 @@ import sys
 mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 try:
-    mysock.bind(("", 1234))
+    mysock.bind(("", 80))
 
 except socket.error:
     print("Failed to bind")
