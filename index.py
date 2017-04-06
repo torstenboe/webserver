@@ -9,3 +9,5 @@ message = "GET / HTTP/1.1\r\n\r\n"
 mysock.sendall(message)
 
 data = mysock.recv(1000)
+
+mysock.close()
