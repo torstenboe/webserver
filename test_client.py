@@ -9,7 +9,7 @@ except socket.error:
     sys.exit()
 
 try:
-    host = 127.0.0.1
+    host = "127.0.0.1"
 
 except socket.gaierror:
     print("Failed to get host")
