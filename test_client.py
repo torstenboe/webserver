@@ -16,7 +16,7 @@ except socket.gaierror:
     sys.exit()
 
 mysock.connect((host, 1234))
-message = "GET / HTTP/1.1\r\n\r\n"
+message = "You have send data!"
 
 try:
     mysock.sendall(bytes(message, 'UTF-8'))
