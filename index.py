@@ -26,5 +26,5 @@ except socket.gaierror:
     sys.exit()
 
 data = mysock.recv(1000)
-print(data)
+print(bytes(data, 'UTF-8'))
 mysock.close()
