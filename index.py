@@ -19,12 +19,12 @@ mysock.connect((host, 80))
 message = "GET / HTTP/1.1\r\n\r\n"
 
 try:
-    mysock.sendall(message)
+    mysock.sendall(bytes(message, 'UTF-8'))
 
 except socket.gaierror:
     print("Failed to send")
     sys.exit()
 
 data = mysock.recv(1000)
-print(bytes(data, 'UTF-8'))
+print(data)
 mysock.close()
