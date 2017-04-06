@@ -14,7 +14,7 @@ mysock.listen(5)
 while True:
     conn, addr = mysock.accept()
     data = conn.recv(1000)
-    println("Got a request!")
+    print("Got a request!")
     if not data:
         break
     conn.sendall(data)
