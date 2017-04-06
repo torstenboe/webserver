@@ -15,7 +15,7 @@ except socket.gaierror:
     print("Failed to get host")
     sys.exit()
 
-mysock.connect(80, host)
+mysock.connect((host, 80))
 message = "GET / HTTP/1.1\r\n\r\n"
 
 try:
