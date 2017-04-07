@@ -15,7 +15,7 @@ except socket.gaierror:
     print("Failed to get host")
     sys.exit()
 
-mysock.connect((host, 8080))
+mysock.connect((host, 80))
 message = "You have send data!"
 
 try:
