@@ -19,7 +19,7 @@ while True:
     #conn.sendall(bytes(http_response, 'utf-8'))
     if not data:
         break
-     conn.sendall(data)
+    conn.sendall(data)
 
 conn.close()
 mysock.close()
