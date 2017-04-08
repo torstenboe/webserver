@@ -17,8 +17,8 @@ while True:
     print("Got a request!")
     http_response = """\HTTP/1.1 200 OK Got a request!"""
     conn.sendall(bytes(http_response, 'utf-8'))
-    if not data:
-        break
+    #if not data:
+    #    break
     # conn.sendall(data)
 
 conn.close()
