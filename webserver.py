@@ -15,11 +15,13 @@ while True:
     conn, addr = mysock.accept()
     data = conn.recv(1000)
     print("Got a request!")
-    http_response = """\
-    HTTP/1.1 200 OK 
-    
-    Got a request!
-    """
+    http_response = "<!DOCTYPE html>" \
+                    "<html>" \
+                    "<body>" \
+                    "<h1>My First Heading</h1>" \
+                    "<p>My first paragraph.</p>" \
+                    "</body>" \
+                    "</html>"
 
     if not data:
         break
