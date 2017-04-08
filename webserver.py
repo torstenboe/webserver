@@ -15,11 +15,16 @@ while True:
     conn, addr = mysock.accept()
     data = conn.recv(1000)
     print("Got a request!")
-    http_response = """\HTTP/1.1 200 OK Got a request!"""
-    #conn.sendall(bytes(http_response, 'utf-8'))
+    http_response = """\
+    HTTP/1.1 200 OK 
+    
+    Got a request!
+    """
+
     if not data:
         break
-    conn.sendall(data)
+    #conn.sendall(data)
+    conn.sendall(bytes(http_response, 'utf-8'))
 
 conn.close()
 mysock.close()
