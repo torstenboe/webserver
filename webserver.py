@@ -18,8 +18,8 @@ while True:
     http_response = "<!DOCTYPE html>" \
                     "<html>" \
                     "<body>" \
-                    "<h1>My First Heading</h1>" \
-                    "<p>My first paragraph.</p>" \
+                    "<h1>Got a request!</h1>" \
+                    "<p>data</p>" \
                     "</body>" \
                     "</html>"
 
