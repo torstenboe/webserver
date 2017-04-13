@@ -1,4 +1,4 @@
-from twython import TwythonStream
+from twython import TwythonStreamer
 
 C_KEY = "..."
 C_SECRET = "..."
