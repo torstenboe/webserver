@@ -23,4 +23,4 @@ class MyStreamer(TwythonStreamer):
 
 stream = MyStreamer(C_KEY, C_SECRET, A_TOKEN, A_SECRET)
 
-stream.status.filter(track="Ian G. Harris")
+stream.statuses.filter(track="Ian G. Harris")
