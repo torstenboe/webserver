@@ -1,4 +1,9 @@
 from twython import Twython
+import RPi.GPIO as GPIO
+import time
+
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(13, GPIO.OUT)
 
 C_KEY = "..."
 C_SECRET = "..."
